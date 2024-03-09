@@ -1,0 +1,46 @@
+<script>
+    let nama_pegawai = "Ridwan";
+    let jabatan = "Manager";
+    let status = "Menikah";
+    let gapok = 0;
+
+    //if(jabatan == "Manager"){
+    //    gapok = 15000000;
+    //}
+    //else if (jabatan == "Asisten Manager"){
+    //    gapok = 10000000;
+    //} else if (jabatan == "Staff"){
+    //    gapok = 5000000;
+    //}
+    //else {
+    //    gapok = 0;
+    //}
+
+    switch(jabatan){
+        case 'Manager' : gapok = 15000000; break;
+        case 'asisten Manager' : gapok = 10000000; break;
+        case 'Staff' : gapok = 5000000; break;
+        default: gapok = 0;
+    }
+    
+    let tunjab = 0.15 * gapok;
+    let bpjs = 0.1 * gapok;
+    let tunkel = (status == 'Menikah') ? 0.2 * gapok : 0;
+    let togaji = gapok + tunjab + bpjs + tunkel;
+
+        document.write(jabatan);
+        document.write(status);
+        document.write(gapok);
+        document.write(tunjab);
+        document.write(bpjs);
+        document.write(tunkel);
+    // document.write(
+    // "Nama Pegawai : " + nama_pegawai +
+    // "Jabatan : " + jabatan +
+    // "Status : " + status +
+    // "Gaji Pokok : " + gapok +
+    // "Tunjangan Jabatan : " + tunjab +
+    // "BPJS : " + bpjs +
+    // "Tunjangan Keluarga : " + tunkel +
+    // "Total gaji : " + togaji);
+</script>
